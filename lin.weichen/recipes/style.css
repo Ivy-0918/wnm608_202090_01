@@ -2,5 +2,31 @@ h1{
 	font-family: 'Open Sans', sans-serif;
 	font-size:30;
 	text-align: center;
-	color: #F63179;
+	color: black;
+}
+h2{
+	font-size: 30px;
+}
+h3 {
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    font-size: 24px;
+}
+.content{
+	display: flex;
+    align-items: center;
+    margin: 30px;
+}
+.col-img{
+}
+.col-text{
+	font-size: 20px;
+    padding: 30;
+    padding-left: 5%;
+    line-height: 40px;
+}
+ul {
+    font-size: 18px;
+    line-height: 20px;
 }
