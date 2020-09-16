@@ -1,18 +1,54 @@
 h1{
 	font-family: 'Open Sans', sans-serif;
 	font-size:30;
+	font-weight: bold;
 	text-align: center;
 	color: black;
 }
 h2{
+	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
 }
 h3 {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     color: white;
     padding-top: 80px;
     font-size: 24px;
 }
+.nav {
+   
+ }
+.nav_links{
+	display: inline-flex;
+	text-decoration: none;
+	list-style: none;
+	font-size: 20px;
+    margin-left: 50%;
+}
+li{
+margin-left: 30px;
+}
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  color: white;
+}
+
+.bc_img { 
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
 .content{
 	display: flex;
     align-items: center;
