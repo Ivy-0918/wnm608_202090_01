@@ -1,52 +1,98 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website</title>
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="css/storetheme.css">
+</head>
+<body>
+	<header class="navbar">
+		<div class="container display-flex flex-align-center">
+		<!-- .container>.navbar>.logo>img -->
+			<div class="flex-none"><h1>Cone7 Ceramics</h1></div>
+			<div class="flex-stretch"></div>
+			
+			<!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->	
+			<nav class="nav flex-none">
+				<ul class="display-flex">
+					<li><a href="#article1">Home</a></li>
+					<li><a href="#About">About</a></li>
+					<li><a href="#Product">Product</a></li>
+					<li><a href="#Contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="view-img" style="background-image: url(img/view-1.jpg);">
+		<img class="logo" src="img/logo.png">
+		<h3>Cone 7 Ceramics</h3>
+		
+	</div>
+	 <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*4>lorem50 -->
+		
+		<!-- .body_sec>#content*2>h3+img -->
+
+
+	<!--.container>.row>.col-md-6>h2+p*3>lorem50-->
+
+	<div class="container">
+		<div class="card soft display-flex">
+			<div class="title">
+				<h1>About Us</h1>
+				<hr>
+				<div class="Content display-flex">
+					<article id="About" class="article flex-stretch" style="width: 50%">
+					<div class="article-body">
+						<h4>"The glaze of pottery comes from our land"</h4>
+						<p>We personally collect the soil unique to Tainan, dry it and decompose it and add it to the glaze. Instead of iron, make our own celadon glaze.</p>
+						<p>We hope that we can use natural resources to combine pottery to make more meaningful works.</p>
+					</div>
+					</article>
+					<div class="flex-stretch display-flex flex-align-center flex-justify-center" style="width: 50%">
+						<img src="img/view-2.jpg" width="500">
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>
+	</div>
+<div class="view-img" style="background-image: url(img/view-3.jpg);">
+		<h3>Our Work</h3>
+		
+</div>
+	<div class="container">
+		<article id="Product" class="article">
+			<h2>Product</h2>
+			<div class="article-body">
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias odit amet, recusandae quidem enim nobis delectus commodi unde perferendis cupiditate voluptatem consequuntur iusto autem porro architecto eius non ratione?</p>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias odit amet, recusandae quidem enim nobis delectus commodi unde perferendis cupiditate voluptatem consequuntur iusto autem porro architecto eius non ratione?</p>
+				
+			</div>
+		</article>
+		<article id="Contact" class="article">
+			<h2>Contact Us</h2>
+			<div class="article-body">
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias odit amet, recusandae quidem enim nobis delectus commodi unde perferendis cupiditate voluptatem consequuntur iusto autem porro architecto eius non ratione?</p>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias odit amet, recusandae quidem enim nobis delectus commodi unde perferendis cupiditate voluptatem consequuntur iusto autem porro architecto eius non ratione?</p>
+				
+			</div>
+		</article>
+	</div>
+</body>
+</html>
 <html>
 <head>
 	<title>m2</title>
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 </head>
 <body>
-	<!-- .container>.navbar>.logo>img -->
-	<div class="container">
-		<div class="navbar" display:flex>
-			<h1>Title</h1>
-			<div class="logo">
-				<img src="" width="">
-			</div>
-			<!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->
-			<nav class="nav">
-				<ul>
-					<li><a href="#article1">Home</a></li>
-					<li><a href="#article2">Product</a></li>
-					<li><a href="#article3">About</a></li>
-					<li><a href="#article4">Contact</a></li>
-				</ul>
-			</nav>
-			<a class="btn" href=""><button>Search</button></a>
-		</div>
-	</div>
-	<div class="view-img" style="background-image: url(img/view-1.jpg);">
-		<h3>Cone7 Ceramics</h3>
-		
-	</div>
-	 <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*4>lorem50 -->
-		
-		<!-- .body_sec>#content*2>h3+img -->
-	<div class="content">
-		<article id="About" class="article">
-			<h2>Article 1</h2>
-			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illo sit, quod ipsum soluta animi molestiae. Sed, possimus, reprehenderit laudantium id consectetur deleniti, officia deserunt voluptatem molestias dolorem tempora molestiae?</p>
-				
-			</div>
-		</article>
-		<article id="Product" class="article">
-			<h2>Article 2</h2>
-			<div class="article-body">
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias odit amet, recusandae quidem enim nobis delectus commodi unde perferendis cupiditate voluptatem consequuntur iusto autem porro architecto eius non ratione?</p>
-				
-			</div>
-		</article>
-	</div>
+	
+	
+	
 </body>
 
 </html>

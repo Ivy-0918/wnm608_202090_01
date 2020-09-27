@@ -1,5 +1,18 @@
+/* you can edit that sth is changed in website*/
 :root{
 	--color-neutral-light:#eee;
 	--color-neutral-medium:#999;
 	--color-neutral-dark:#444;
+}
+body{
+	font-family: Arial, sans-serif;
+}
+
+h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
 }
