@@ -143,6 +143,21 @@ h4{
     padding-bottom: 2em;
     font-size: 22px;
 }
+.btn{
+	margin-top: 30px;
+	padding: 10px 15px;
+	border-radius:30px;
+}
+.view-img h5{
+	font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 50%;
+    text-align: center;
+}
 
 .article#About{
 	width: 70%;
@@ -162,3 +177,35 @@ h4{
 	border-radius: 0.8em;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
    }
+
+.small-container{
+	max-width: 1200px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 3em;
+    margin-bottom: 3em;
+}
+.col-md-3{
+	flex-basis: 30%;
+	padding: 10px;
+	min-width: 250px;
+	margin-bottom: 30px;
+}
+
+.col-md-3 img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
