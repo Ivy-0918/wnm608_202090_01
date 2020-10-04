@@ -20,9 +20,23 @@ body{
 	font-family: Arial, sans-serif;
 	background-color: #f7f7f7;
 }
-hr{
 
+ul{
+	list-style: none;
 }
+a{
+	text-decoration: none;
+	color:inherit;
+	font-weight: bold;
+}
+a:hover{text-decoration: underline;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{font-family: Georgia, "Times New Roman",serif;}
 
 .navbar{
 	background-color:var(--color-neutral-dark);
@@ -54,31 +68,20 @@ hr{
    
 }
 .container {
-	max-width:1000px;
+	max-width:1200px;
    margin-right: auto;
    margin-left: auto;
 }
 .hidden{display: none;}
 
-a{
-	text-decoration: none;
-	color:inherit;
-	font-weight: bold;
-}
-a:hover{text-decoration: underline;}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{font-family: Georgia, "Times New Roman",serif;}
 
 
 h1{
 	font-size: 30px;
 
 }
+
 
 
 
@@ -149,7 +152,7 @@ article#article1 {
     text-align: left;
 }
 h4{
-    padding-bottom: 2em;
+    padding-bottom: .8em;
     font-size: 22px;
 }
 .btn{
@@ -187,21 +190,26 @@ h4{
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
    }
 
+
 /*smaill-container max-width:1200*/
 
 .small-container{
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: auto;
 	padding-left: 25px;
 	padding-right: 25px;
 	margin-top: 3em;
     margin-bottom: 3em;
 }
-.col-md-3{
-	flex-basis: 30%;
+.padding-medium{
+
 	padding: 10px;
-	min-width: 250px;
+	/*min-width: 250px;*/
 	margin-bottom: 30px;
+}
+.padding-medium-2{
+	padding: 20px;
+	flex-basis: 33%;
 }
 
 .col-md-3 img{
@@ -211,13 +219,13 @@ h4{
 .col-md-4:hover .overlay{
 	opacity: 0.8;
 }
+
 .col-md-4{
 	position: relative;
-	flex-basis: 33%;
-	padding: 20px;
-	min-width: 250px;
 }
+
 .col-md-4 img{
+	display: block;
 	width: 100%;
 }
 
@@ -247,11 +255,14 @@ h4{
 
 /*footer-container max-width:a350*/
 .footer-container{
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: auto;
 	margin-top: 0;
 	margin-bottom: 0;
 	background-color: #e8e8e8;
+}
+.padding-medium-3{
+	padding-left: 30px;
 }
 .col-md-6{
 	margin-top: auto;
@@ -260,7 +271,8 @@ h4{
 	justify-content: center;
 }
 .col-md-6 img{
-	width: 40%;
+	width: 100%;
+	padding: 2em;
 }
 
 .icon{
@@ -271,13 +283,13 @@ h6{
     line-height: 2em;
 }
     
-ul{
-	list-style: none;
-}
+
 .row.display-flex{
 	margin-right: 3em;
 	margin-left: 3em;
 }
+
+
 .well {
 	padding: 0.5em;
 	background-color: var(--color-neutral-light);
