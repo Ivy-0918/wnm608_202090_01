@@ -3,6 +3,19 @@
 	--color-neutral-light:#eee;
 	--color-neutral-medium:#999;
 	--color-neutral-dark:#444;
+
+
+	--color-main-light:red;
+	--color-main-medium:red;
+	--color-main-dark:red;
+
+	--color-alt-light:red;
+	--color-alt-medium:red;
+	--color-alt-dark:red;
+
+	--color-warning:red;
+	--color-error:red;
+	--color-purchase:red;
 }
 body{
 	font-family: Arial, sans-serif;
