@@ -24,21 +24,44 @@
 
 
 <!--nav-->	
-	<nav class="toc container">
+	<nav class="container">
 		<h2>Table of content</h2>
 		<div class="card soft">
 			<ul>
 				<li>
-					<a href="styleguide/#grid">Grid</a>
-				</li>
-				<ul>
-					<li><a href="styleguide/#basic-grid">Basic Grid</a></li>
-					<li><a href="styleguide/#complex-grid">Complex Grid</a></li>
-					<li><a href="styleguide/#responsive-grid">Responsive Grid</a></li>
-				</ul>
-				<li>
 					<a href="styleguide/#Typography">Typography</a>
 				</li>
+					<ul>
+						<li><a href="styleguide/#code">Code</a></li>
+						<li><a href="styleguide/#example">Example</a></li>
+						<li><a href="styleguide/#paragraphs">Paragraphs</a></li>
+					</ul>
+
+				<li>
+					<a href="styleguide/#grid">Grid</a>
+				</li>
+					<ul>
+						<li><a href="styleguide/#basic-grid">Basic Grid</a></li>
+						<li><a href="styleguide/#complex-grid">Complex Grid</a></li>
+						<li><a href="styleguide/#responsive-grid">Responsive Grid</a></li>
+					</ul>
+				
+				<li>
+					<a href="styleguide/#Typography">Card</a>
+				</li>
+					<ul>
+						<li><a href="styleguide/#basic-card">Basic Card</a></li>
+						<li><a href="styleguide/#soft-card">Soft Card</a></li>
+						<li><a href="styleguide/#hard-card">Hard Card</a></li>
+					</ul>
+
+				<li>
+					<a href="styleguide/#navigations">Navigations</a>
+				</li>
+					<ul>
+						<li><a href="styleguide/#basic-nav">Basic Nav</a></li>
+						<li><a href="styleguide/#my-nav">My Nav</a></li>
+					</ul>
 			</ul>
 		</div>
 	</nav>
@@ -48,7 +71,7 @@
 	<div class="container" id="Typography">
 		<h2>Typography</h2>
 		<div class="card soft">
-			<h4>Code</h4>
+			<h4 id="code">Code</h4>
 			<code class="well">&lt;h1>heading 1&lt;/h1>
 &lt;h2>heading 2&lt;/h2>
 &lt;h3>heading 3&lt;/h3>
@@ -56,7 +79,7 @@
 &lt;h5>heading 5&lt;/h5>
 &lt;h6>heading 6&lt;/h6></code>
 
-			<h4>Example</h4>
+			<h4 id="example">Example</h4>
 			<div class="well">
 				<!--h$*6{heading $}-->
 				<h1>heading 1</h1>
@@ -68,8 +91,7 @@
 			</div>
 
 
-			<h4>Paragraphs</h4>
-
+			<h4 id="paragraphs">Paragraphs</h4>
 			<div class="well">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, soluta quam provident explicabo error quisquam quo, dolor officia! Fugiat, unde optio ex sapiente? Facilis reiciendis molestias facere vel obcaecati tempora, assumenda, quos ab nobis blanditiis. Sed blanditiis laboriosam pariatur incidunt, fugit animi illo expedita mollitia eos iste. Quam, reiciendis, tenetur.</p>
 				<p>Dicta culpa, sunt fugit iusto eligendi, a placeat provident hic cumque cupiditate? Sunt rem earum cum, soluta adipisci tempora ullam quibusdam minus exercitationem ab deleniti ex dolor natus esse facere debitis! Quibusdam recusandae quo, ea eligendi sequi, temporibus culpa obcaecati laboriosam expedita excepturi, amet commodi consectetur quaerat? Dolorem, vero, dolore.</p>
@@ -81,7 +103,7 @@
 
 <!--Grid-->	
 	<div class="container" id=grid>
-	<h2>Grid</h2>
+		<h2>Grid</h2>
 		<div class="card soft">
 			<h2 id="basic-grid">Basic Grid</h2>
 
@@ -90,24 +112,24 @@
 				<div class="col-6"><div class="well">Column 6</div>
 			</div>
 		</div>
-		
 	</div>
 </div>
+
 <!--Card-->	
-	<div class="container">
+	<div class="container" id="card">
 		<h2>Card</h2>
 		<div class="card basic">
-			<h4>Basic Card</h4>
+			<h4 id="basic-card">Basic Card</h4>
 			<div class="card">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, animi! Dignissimos in dolore, consequuntur nobis id excepturi eaque temporibus facilis natus eos rerum eveniet earum molestiae at totam quia doloremque.</p>
 			</div>
 
-			<h4>Soft Card</h4>
+			<h4 id="soft-card">Soft Card</h4>
 			<div class="card soft">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, animi! Dignissimos in dolore, consequuntur nobis id excepturi eaque temporibus facilis natus eos rerum eveniet earum molestiae at totam quia doloremque.</p>
 			</div>
 
-			<h4>Hard Card</h4>
+			<h4 id="hard-card">Hard Card</h4>
 			<div class="card hard">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, animi! Dignissimos in dolore, consequuntur nobis id excepturi eaque temporibus facilis natus eos rerum eveniet earum molestiae at totam quia doloremque.</p>
 			</div>
@@ -126,7 +148,7 @@
 		<h2>Navigations</h2>
 
 		<div class="card soft">
-			<h4>Basic Nav</h4>
+			<h4 id="basic-nav">Basic Nav</h4>
 
 
 			<!--nav.nav>ul>li*4>a[href=#]{Link $}-->	
@@ -138,16 +160,48 @@
 					<li><a href="#">Link 4</a></li>
 				</ul>
 			</nav>
+			<br>
+			
+			<h4 id="my-nav">My Nav</h4>
+
+			<nav class="my_nav">
+				<img class="logo" src="styleguide/img/logo.png">
+				<h5>Toy Shop</h5>
+				<div class="nav_left">
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="nav_right display-flex">
+					<div class="icon">
+						<a href=""><img src="styleguide/img/account.png"></a>
+						<a href=""><img src="styleguide/img/shop.png"></a>
+					</div>
+				</div>
+				
+			</nav>
+				
 		</div>
 			
 
 	</div>
 
+	<div class="container" id="button">
+		<h2>Button</h2>
 
-
-
-
-
+		<div class="card soft">
+			<h4>My Btn</h4>
+			<div class="my_btn">
+				<a class="btn1" href="#" style="text-decoration: none;">Button</a>
+				<a class="btn2" href="#" style="text-decoration: none;">Button</a>
+				<a class="btn3" href="#" style="text-decoration: none;">Button</a>
+				<a class="btn4" href="#" style="text-decoration: none;">Button</a>
+			</div>
+		</div>
+	</div>
 
 
 
