@@ -162,38 +162,6 @@ code.well {
    
 }
 
-/*h1{
-	font-size: 30px;
-
-}*/
-/*h4{
-    padding-bottom: .8em;
-    font-size: 22px;
-}*/
-/*h6{
-	font-size: 20px;
-    line-height: 2em;
-}
-    */
-
-/*.title {
-    text-align: center;
-    padding: 10px 30px;
-}*/
-.content{
-	max-width:1000px;
-   margin-right: auto;
-   margin-left: auto;
-}
-.Content.display-flex{
-	padding-top: 20px;
-}
-
-article#article1 {
-    /* padding: 30px; */
-    padding-bottom: 30px;
-}
-
 .view-img{
 	position: relative;
 	overflow: hidden;
@@ -203,10 +171,6 @@ article#article1 {
 	height: 60vh;
 }
 
-.view_more{
-	text-align: right;
-	padding: 20px 0 0;
-}
 .view-img h3 {
     position: absolute;
     top: 50%;
@@ -216,10 +180,7 @@ article#article1 {
     font-size: 3.5em;
 }
 
-.article-body{
-	padding-right: 40px;
-    text-align: left;
-}
+
 
 .btn{
 	margin-top: 30px;
@@ -235,12 +196,6 @@ article#article1 {
     color: white;
     width: 50%;
     text-align: center;
-}
-
-.article#About{
-	width: 70%;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 /* card */
@@ -261,101 +216,6 @@ article#article1 {
     border-radius: 0.2em;
     border: 2px solid green;
 }
-
-/*smaill-container max-width:1200*/
-
-.small-container{
-	max-width: 1200px;
-	margin: auto;
-	padding-left: 25px;
-	padding-right: 25px;
-	margin-top: 3em;
-    margin-bottom: 3em;
-}
-.padding-medium{
-
-	padding: 10px;
-	/*min-width: 250px;*/
-	margin-bottom: 30px;
-}
-.padding-medium-2{
-	padding: 20px;
-	flex-basis: 33%;
-}
-
-.col-md-3 img{
-	display: block;
-	width: 100%;
-}
-.col-md-4:hover .overlay{
-	opacity: 0.8;
-}
-
-.col-md-4{
-	position: relative;
-}
-
-.col-md-4 img{
-	display: block;
-	width: 100%;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #e8e8e8;
-}
-.text {
-  color: black;
-  font-size: 20px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/*footer-container max-width:a350*/
-.footer-container{
-	max-width: 1200px;
-	margin: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	background-color: #e8e8e8;
-}
-.padding-medium-3{
-	padding-left: 30px;
-}
-.col-md-6{
-	margin-top: auto;
-	margin-bottom: auto;
-	align-items: center;
-	justify-content: center;
-}
-.col-md-6 img{
-	width: 100%;
-	padding: 2em;
-}
-
-.icon{
-	width: 100%;
-}
-
-
-.row.display-flex{
-	margin-right: 3em;
-	margin-left: 3em;
-}
-
 
 .well {
 	padding: 0.5em;
