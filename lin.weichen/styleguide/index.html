@@ -22,8 +22,6 @@
 		</div>		
 	</header>
 
-
-<!--nav-->	
 	<nav class="container">
 		<h2>Table of content</h2>
 		<div class="card soft">
@@ -102,23 +100,23 @@
 	</div>
 
 <!--Grid-->	
-	<div class="container" id=grid>
-		<h2>Grid</h2>
-		<div class="card soft">
-			<h2 id="basic-grid">Basic Grid</h2>
+		<!-- <div class="container" id=grid>
+			<h2>Grid</h2>
+			<div class="card soft">
+				<h2 id="basic-grid">Basic Grid</h2>
 
-			<div class="grid">
-				<div class="col-6"><div class="well">Column 6</div>
-				<div class="col-6"><div class="well">Column 6</div>
+				<div class="grid">
+					<div class="col-6"><div class="well">Column 6</div>
+					<div class="col-6"><div class="well">Column 6</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
+ -->
 
 <!--Card-->	
 	<div class="container" id="card">
 		<h2>Card</h2>
-		<div class="card basic">
+		<div class="card soft">
 			<h4 id="basic-card">Basic Card</h4>
 			<div class="card">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, animi! Dignissimos in dolore, consequuntur nobis id excepturi eaque temporibus facilis natus eos rerum eveniet earum molestiae at totam quia doloremque.</p>
@@ -160,50 +158,537 @@
 					<li><a href="#">Link 4</a></li>
 				</ul>
 			</nav>
-			<br>
-			
-			<h4 id="my-nav">My Nav</h4>
-
-			<nav class="my_nav">
-				<img class="logo" src="styleguide/img/logo.png">
-				<h5>Toy Shop</h5>
-				<div class="nav_left">
-					<ul>
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
-						<li><a href="#">Link 4</a></li>
-					</ul>
-				</div>
-				<div class="nav_right display-flex">
-					<div class="icon">
-						<a href=""><img src="styleguide/img/account.png"></a>
-						<a href=""><img src="styleguide/img/shop.png"></a>
-					</div>
-				</div>
-				
-			</nav>
 				
 		</div>
 			
 
 	</div>
-
+<!--Button-->
 	<div class="container" id="button">
 		<h2>Button</h2>
 
 		<div class="card soft">
-			<h4>My Btn</h4>
-			<div class="my_btn">
-				<a class="btn1" href="#" style="text-decoration: none;">Button</a>
-				<a class="btn2" href="#" style="text-decoration: none;">Button</a>
-				<a class="btn3" href="#" style="text-decoration: none;">Button</a>
-				<a class="btn4" href="#" style="text-decoration: none;">Button</a>
-			</div>
+			
+		</div>
+	</div>
+
+<!--Table-->	
+	<script>
+	const makeTable = (classes='')=> {
+		const head = ['ID','office','Name','Email','Phone'];
+		const body = [
+			['918',"Weichen Lin", 'rw10429013@gmail.com','666-6666'],
+			['918',"Weichen Lin", 'rw10429013@gmail.com','666-6666'],
+			['918',"Weichen Lin", 'rw10429013@gmail.com','666-6666'],
+		];
+
+		document.write(`
+		<table class="${classes}">
+			<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}
+			</tr></thead>
+			<tbody>
+				${body.reduce((r,o,i)=>r+
+					`<tr>${[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')}</tr>`,'')}
+			<tbody>
+		</table>
+		`)
+	}
+	</script>
+	<div class="container" id="tables">
+		<h2>Tables</h2>
+
+		<div class="card soft">
+			<h4>Basic Table</h4>
+
+			<script>makeTable('table')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Striped Table</h4>
+
+			<script>makeTable('table striped')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Lined Horizontal</h4>
+
+			<script>makeTable('table lined horizontal')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Lined Vertical</h4>
+
+			<script>makeTable('table lined vertical')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Lined Border</h4>
+
+			<script>makeTable('table lined border')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Lined Every</h4>
+
+			<script>makeTable('table lined all')</script>
+		</div>
+
+		<div class="card soft">
+			<h4>Lined All</h4>
+
+			<script>makeTable('table lined all striped')</script>
 		</div>
 	</div>
 
 
+<!--Forms-->	
+	<div class="container" id="forms">
+		<h2>Forms</h2>
+		
+		<div class="card soft">
+			<h4>Basic Input</h4>
+			<!-- input: 輸入 -->
+			<!-- form-input: 輸入一般形式 -->
+			<!-- placeholder: 顯示文字的部分，text,search, number 和type相同 -->
+			<form>
+				<input type="text" placeholder="Text" class="form-input">
+				<input type="number" placeholder="Number" class="form-input">
+				<input type="search" placeholder="Search" class="form-input">
+				<input type="password" placeholder="Passsword" class="form-input">
+			</form>
+
+			<h4>Form Label &amp; Control</h4>
+			<!-- form-control: 上下間距 -->
+			<!-- form-label: 標籤 -->
+			<!-- label for & input id 要連線且相同 -->
+			<form>
+				<div class="form-control">
+					<label for="example-1" class="form-label">Example</label>
+					<input id="example-1" type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label for="example-2" class="form-label">Example</label>
+					<input id="example-2" type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label for="example-3" class="form-label">Example</label>
+					<input id="example-3" type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="display-flex flex-align-center">
+					<div class="flex-none">
+						<label for="example-search" class="form-label">Search</label>
+					</div>
+					<div class="flex-stretch">
+						<input id="example-search" type="search" placeholder="Text" class="form-input">
+					</div>
+					<div class="flex-none">
+                  		<label for="example-search" class="form-label">Search</label>
+               		</div>
+	               <div class="flex-stretch">
+	                  <input id="example-search" type="search" placeholder="Text" class="form-input">
+	               </div>
+				</div>
+			</form>
+
+			<h4>Buttons</h4>
+			<!-- 三種相同形式按鈕 class="form-button" -->
+			<div class="form-control">
+				<button type="button" class="form-button">Button</button>
+			</div>
+			<div class="form-control">
+				<input type="button" class="form-button" value="Button">
+			</div>
+			<div class="form-control">
+				<a href="#" class="form-button">Button</a>
+			</div>
+			<div class="form-control">
+				<div class="display-flex flex-align-center">
+					<div class="flex-stretch">Here is button with layout</div>
+					<div class="flex-none"><a href="#" class="form-button">Button</a></div>
+				</div>
+			</div>
+			<!-- 單一按鈕 class="btn inline" -->
+			<div class="form-control">
+				<a href="#" class="btn inline">Button</a>
+			</div>
+
+			<h4>Hotdog</h4>
+
+			<div class="hotdog">hotdog</div>
+
+			<form>
+				<div class="form-control">
+					<input type="search"  class="hotdog dark">
+				</div>
+
+				<div class="form-control">
+					<div class="hotdog">
+						<img src="styleguide/img/icons/email.svg" class="icon">
+						<input type="text" id="example-email">
+					</div>
+				</div>
+				<div class="form-control">
+					<div class="hotdog">
+						<input type="password" placeholder="Passsword" id="example-lock">
+						<img src="styleguide/img/icons/lock.svg" class="icon">
+					</div>
+				</div>
+			</form>
+
+			<h4>Select</h4>
+
+			<div class="form-select">
+				<select>
+					<option>Option1</option>
+					<option>Option2</option>
+					<option>Option3</option>
+				</select>
+			</div>
+
+			<div class="form-control">
+				<div class="grid">
+					<div class="col-xs-12 col-md-8">
+						<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. xssumenda, blanditiis a nisi? Enim quaerat quae culpa officiis laborum ut facere! Id, a odio possimus voluptatibus ducimus eaque accusantium exercitationem repellendus obcaecati magni, delectus quos neque mollitia placeat omnis nemo, accusamus excepturi eum dolores cumque est, vero ipsum.</p>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="form-select">
+							<select>
+								<option>Option1</option>
+								<option>Option2</option>
+								<option>Option3</option>
+							</select>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+			<h4>Checkbox</h4>
+
+
+			<div class="form-control">
+				<input id="example-check" type="checkbox">
+				<label for="example-check">Text</label>
+			</div>
+			<div class="form-control">
+				<label>Text
+					<input type="checkbox">
+				</label>
+			</div>
+			<!-- Checkbox Trick -->
+			<div class="toggle">
+				<input id="toggle-1" type="checkbox" class="hidden">
+				<label for="toggle-1"></label>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+		<h2>Products</h2>
+
+		<div class="well">
+			<h4>Figure</h4>
+			<figure>
+				<img src="https://via.placeholder.com/600x600">
+				<figcaption>image info &amp; price</figcaption>
+			</figure>
+
+			<!-- Catergary -->
+			<h4>Product Figure</h4>
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="product-item">
+						<div class="product-image">
+							<img src="https://via.placeholder.com/600x600?text=Product">
+						</div>
+						
+						<figcaption class="product-description">
+							<div class="product-price" style="font-size: 1.2em; padding: 0.2em 0.4em;">$Price</div>
+							<div class="product-title" style="font-size: 0.8em;">Product Name</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-xs-12 col-md-8">
+					<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Numquam maiores impedit laborum similique minus velit voluptas, rem? In, rerum! Quasi cupiditate provident voluptatibus atque, qui quidem molestias rerum sapiente nam! Perspiciatis accusamus perferendis aliquid aperiam! Illo tempore ex temporibus culpa rerum animi voluptate! Esse, magnam? Odio obcaecati, voluptates quod. Autem.</p>
+					<p>Enim eos perspiciatis cupiditate. Perferendis voluptatibus voluptate sequi repellat laboriosam porro. Ipsa nobis maxime illo ullam sint, accusamus enim odit, adipisci sit perspiciatis, soluta iure ipsum eius. Deserunt voluptatibus excepturi nesciunt nobis porro odit et ullam, magnam laboriosam hic veniam, aliquam. Accusamus sint porro quos sapiente tenetur illo quam, aliquam.</p>
+				</div>
+			</div>
+			<h4>Product Grid</h4>
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-item">
+							<div class="product-image">
+								<img src="https://via.placeholder.com/600x600?text=Product">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="font-size: 1.2em; padding: 0.2em 0.4em;">$Price</div>
+								<div class="product-title" style="font-size: 0.8em;">Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-item">
+							<div class="product-image">
+								<img src="https://via.placeholder.com/600x600?text=Product">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="font-size: 1.2em; padding: 0.2em 0.4em;">$Price</div>
+								<div class="product-title" style="font-size: 0.8em;">Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-item">
+							<div class="product-image">
+								<img src="https://via.placeholder.com/600x600?text=Product">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="font-size: 1.2em; padding: 0.2em 0.4em;">$Price</div>
+								<div class="product-title" style="font-size: 0.8em;">Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- 圖文並列（上下） -->
+		
+
+	</div>
+
+	<div class="container">
+		<h2>Color Palettes</h2>
+
+		<div class="card soft">
+			<div class="grid">
+				<div class="col-xs-12 col-md-6">
+					<h4>Primary Color</h4>
+
+					<div class="example-primary">
+						<div class="color-1" style="background-color: #efefef;">
+							<p>#efefef</p>
+						</div>
+						<div class="color-1" style="background-color: #2c3e58;">
+							<p>#2c3e58</p>
+						</div>
+						<div class="color-1" style="background-color: #1d1d1b;">
+							<p>#1d1d1b</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<h4>Secondary Color</h4>
+
+					<div class="example-secondary">
+						<div class="color-1" style="background-color: #e95958;">
+							<p>#e95958</p>
+						</div>
+						<div class="color-1" style="background-color: #f6af54;">
+							<p>#f6af54</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>Navigation</h2>
+
+		<div class="navbar" style="background-color: #1d1d1b;">
+			<div class="flex-none"><img src="styleguide/img/logo-2.png"></div>
+			<div class="flex-stretch"></div>
+
+			<nav class="nav flex-none">
+				<ul class="display-flex">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Product</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="navbar-icons display-flex flex-align-center">
+				<img src="styleguide/img/account.png">
+				<img src="styleguide/img/shop.png">
+			</div>
+			
+			
+
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>View Window</h2>
+
+		<div class="card soft">
+			<div class="view-window" style="background-image: url(styleguide/img/view.jpg);">
+			<h4></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>Single Products</h2>
+
+		<div class="card soft">
+
+			<div class="grid display-flex">
+				<div class="col-xs-12 col-md-6">
+					<img src="styleguide/img/model-1.jpg" style="width: 100%;">
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="product-info">
+						<h4>Product Name</h4>
+						<div class="item-price">
+							<p>$Price</p>
+						</div>
+
+						<hr>
+						<div class="item-info">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus molestiae ducimus animi aut quo repudiandae totam quae, ullam dolorum numquam amet a voluptate, cumque autem non perferendis iure id. Blanditiis aut natus optio doloremque ab, nulla architecto, tenetur veniam voluptatibus sequi odit quam similique reiciendis adipisci, vel nam quae repellendus!</p>
+						</div>
+						<div class="item-button">
+							<div class="form-control">
+								<button type="button" class="cart-button">Buy Now</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+		
+				
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>Product List</h2>
+
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-list">
+							<div class="product-image">
+								<img src="styleguide/img/model-2.png">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="color: var(--color-navbar);">$Price</div>
+								<div class="product-title" >Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-list">
+							<div class="product-image">
+								<img src="styleguide/img/model-3.png">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="color: var(--color-navbar);">$Price</div>
+								<div class="product-title" >Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<a href="#">
+						<figure class="product-list">
+							<div class="product-image">
+								<img src="styleguide/img/model-4.png">
+							</div>
+							
+							<figcaption class="product-description">
+								<div class="product-price" style="color: var(--color-navbar);">$Price</div>
+								<div class="product-title" >Product Name</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+	</div>
+
+
+	<div class="container">
+		<h2>Purchase Page</h2>
+		
+		<div class="card soft">
+			<h4>Customer Infomation</h4>
+
+			<form>
+				<div class="display-inline-block">
+					<div>
+						<label for="first-name" class="form-label">First Name</label>
+						<input id="first-name" type="text" class="form-input">
+					</div>
+
+					<div>
+						<label for="last-name" class="form-label">Last Name</label>
+						<input id="last-name" type="text" class="form-input">
+					</div>
+				</div>
+
+				<div class="form-control">
+					<label for="adress" class="form-label">Address</label>
+					<input id="adress" type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label for="phone" class="form-label">Phone</label>
+					<input id="phone" type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label for="email" class="form-label">Email</label>
+					<input id="email" type="text" placeholder="Text" class="form-input">
+				</div>
+				
+			</form>
+
+			<h4>Billing Information</h4>
+
+			<form>
+				<h5>Payment Method</h5>
+				<div class="display-inline-block">
+					<div class="form-select">
+						<select>
+							<option>Paypal</option>
+							<option>Credit Card</option>
+						</select>
+					</div>
+				</div>
+				<h5>Credit Number</h5>
+				<div class="form-control" style="margin: 0;">
+					<input type="text"  class="hotdog" style="border-radius:0;">
+				</div>
+				<h5>CVV2</h5>
+				<div class="form-control display-inline-block" style="margin: 0; ">
+					<input type="password"  class="hotdog" style="border-radius:0;">
+				</div>
+
+			</form>
+
+			<div class="form-control">
+				<div class="display-flex flex-align-center">
+					<div class="flex-stretch"></div>
+					<div class="flex-none"><a href="#" class="shop-button" >Purchase</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
