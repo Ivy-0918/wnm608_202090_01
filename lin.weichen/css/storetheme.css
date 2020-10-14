@@ -216,6 +216,8 @@ h4{
 
 }
 
+
+/*Single Project*/
 .product-info {
     margin: 30px;
 }
@@ -225,6 +227,15 @@ h4{
     color: var(--color-navbar);
     font-size: 1.8em;
 }
+.item-info{
+	text-align: center;
+}
+.item-info>p{
+	margin-bottom: 3em;
+}
+
+
+
 /*shop button*/
 .cart-button{
 	display: inline-block;
@@ -233,12 +244,17 @@ h4{
 	border-radius: 30px;
 	border-width: 0;
 	padding: 0.5em 2em;
-	background-color: var(--color-navbar);
+	background-color: black;
 	color: white;
 	text-align: center;
 	cursor: pointer;
 	outline: 0;
 	-webkit-appearance:none;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+.cart-button:hover{
+	background-color: var(--color-navbar);
+	color: white;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
