@@ -99,7 +99,7 @@ code.well {
       text-decoration:none;
    }
 
-/*nav*/
+/*Nav*/
 
 .navbar{
 	background-color:var(--color-neutral-dark);
@@ -114,7 +114,7 @@ code.well {
    font-family:Helvetica, Arial, sans-serif;
 }
 
-/* view-window*/
+/* View-window*/
 .view-window {
     position: relative;
     overflow: hidden;
@@ -126,7 +126,7 @@ code.well {
 
 
 
-/* card */
+/* Card */
 .card{
 	background-color:#ffffff;
 	padding: 1em;
@@ -156,7 +156,7 @@ code.well {
 }
 
 
-/*basic_nav*/
+/*Basic_nav*/
 
 
 .basic_nav a:hover{
@@ -167,7 +167,7 @@ code.well {
 
 
 
-/*tables*/
+/*Tables*/
 .table{
 	width: 100%;
 	border-collapse: collapse;
@@ -200,7 +200,7 @@ code.well {
 
 
 
-/*forms*/
+/*Forms*/
 .form-input{
 	display: inline-block;
 	width: 100%;
