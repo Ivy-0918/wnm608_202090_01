@@ -16,25 +16,25 @@ echo '<div>i have $a things</div>';
 //VALUE TYPES
 
 //Number
-//Integer
+//Integer（整數）
 $b = 15;
-//Float
+//Float (小數點)
 $b = 0.5;
-
+//$ a,b,c 取決於順序排列
 $b = 10;
 
 echo "<div>i have $b things</div>";
 echo '<div>i have $b things</div>';
 
 
-//String
-$name = "Yerguy";
+//String()
+$name = "You guy";
 $name = 'Hi';
 
-//Boolean
+//Boolean(true or false values)
 $isOn = true;
 
-//function, class, object
+//function, class, object (include parenthesis, exponents, multiplication, division)
 
 //Math
 echo 5+4*2;
@@ -45,11 +45,8 @@ echo (5+4)*2;
 
 //Concatenation
 echo"<div>b + a = " . "c</div>";
+//"c</div>">> string; "<div>b + a = ">> string;
 echo"<div>$b + $a = " .($b+$a). "</div>";
-
-
-
-
 
 
 ?>
@@ -64,6 +61,7 @@ echo"<div>$b + $a = " .($b+$a). "</div>";
 $firstname = "Weichen";
 $lastname = "Lin";
 $fullname = "$firstname $lastname";
+// $fullname = $firstname.$lastname;
 
 echo $fullname;
 ?>
@@ -95,6 +93,7 @@ echo "<{$_GET['type']}>My name is {$_GET['name']}</{$_GET['type']}>";
 
 //Arrays
 $colors = array("red","green","blue");
+//("red","green","blue")>>("0,1,2")>>index
 $colors = ["red","green","blue"];
 
 echo $colors[1];
@@ -138,8 +137,44 @@ $c = "$a";
 $d = $c*1;
 
 
+$colorsObject = (object)$colorsAssociative;
+
+//echo $colorsObject;
+
+echo "<hr>";
+
+
+//Array Index Notation
+echo $colors[0]."<br>";
+echo $colorsAssociative['red']."<br>";
+echo $colorsAssociative[$colors[0]]."<br>";
+
+
+//Object Property Notation
+echo $colorsObject -> red."<br>";
+echo $colorsObject->{$colors[0]}."<br>";
+
+
 ?>
 
+<hr>
+
+<?php
+
+print_r($colors);
+echo "<hr>";
+print_r($colorsAssociative);
+echo "<hr>";
+echo "<pre>",print_r($colorsObject),"</pre>";
+
+
+// CUSTOM FUNCTIONS
+function print_p($d) {
+   echo "<pre>",print_r($d),"</pre>";
+}
+
+print_p($_GET);
+print_p($colors);
 
 
 

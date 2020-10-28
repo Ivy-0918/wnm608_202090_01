@@ -11,5 +11,6 @@
 				<li><a href="product_list.php">Store</a></li>
 			</ul>
 		</nav>
+		
 	</div>
 </header>
