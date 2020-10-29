@@ -10,8 +10,9 @@ echo "<div>bye</div>";
 $a = 5;
 
 //String Interpolation
-echo "<div>i have $a things</div>";
-echo '<div>i have $a things</div>';
+echo "<div>i have $a things</div>";//Result: i have 5 things
+echo '<div>i have $a things</div>';//Result: i have $a things
+
 
 //VALUE TYPES
 
@@ -38,14 +39,16 @@ $isOn = true;
 
 //Math
 echo 5+4*2;
+echo '<br>';
 
 //Order of Operation
-//PEMDS
+//PEMDAS, PE(exponent and parenthesis); MDS(Multiplication, division, addition and subtraction);
 echo (5+4)*2;
 
-//Concatenation
+//Concatenation, combin two strings together;
+//In math, it should break string with . ;
+//"<div>b + a = ">> string; "c</div>">> string; 
 echo"<div>b + a = " . "c</div>";
-//"c</div>">> string; "<div>b + a = ">> string;
 echo"<div>$b + $a = " .($b+$a). "</div>";
 
 
@@ -60,8 +63,8 @@ echo"<div>$b + $a = " .($b+$a). "</div>";
 
 $firstname = "Weichen";
 $lastname = "Lin";
-$fullname = "$firstname $lastname";
-// $fullname = $firstname.$lastname;
+$fullname = "$firstname $lastname";//"first last";
+// $fullname = $firstname.$lastname 名和姓之間會沒有空間;
 
 echo $fullname;
 ?>
@@ -81,8 +84,11 @@ echo "<div><a href='?name=May'>May</a></div>";
 echo "<div><a href='?name=June'>June</a></div>";
 echo "<div>My name is {$_GET['name']}</div>";
 
+//&type=h1
+
 echo "<div><a href='?name={$_GET['name']}&type=h1'>H1</a></div>";
 echo "<div><a href='?name={$_GET['name']}&type=button'>BUTTON</a></div>";
+//Change <div> To <{$_GET['type']}>
 echo "<{$_GET['type']}>My name is {$_GET['name']}</{$_GET['type']}>";
 
 ?>
@@ -103,25 +109,27 @@ echo"
 	<br>$colors[1]
 	<br>$colors[2]
 ";
+echo "<br>";
 
-echo count($colors);
+echo count($colors);//count 總數;
 
 ?>
+
 
 <div style="color:<?= $colors[1] ?>">
    This text is green
 </div>
 
-//Associative Array
 
 <?php
 
+//array with indexs >> Associative Array and Object
 // Associative Array
 $colorsAssociative = [
    "red" => "#f00",
    "green" => "#0f0",
    "blue" => "#00f"
-];
+];// => , assign "#00f" value to "blue" index;
 
 echo $colorsAssociative['red'];
 
@@ -132,28 +140,25 @@ echo $colorsAssociative['red'];
 
 <?php
  
-//Casting
-$c = "$a";
+//Casting,將不同的性質去改變價值
+$c = "$a";//$c is different type with $a, but value is same as "$a"
 $d = $c*1;
 
 
 $colorsObject = (object)$colorsAssociative;
-
-//echo $colorsObject;
+//echo $colorsObject, Object不能用echo;
 
 echo "<hr>";
 
-
 //Array Index Notation
-echo $colors[0]."<br>";
-echo $colorsAssociative['red']."<br>";
-echo $colorsAssociative[$colors[0]]."<br>";
+echo $colors[0]."<br>";//result:red
+echo $colorsAssociative['red']."<br>";//result:#f00;
+echo $colorsAssociative[$colors[0]]."<br>";//result:#f00;
 
 
 //Object Property Notation
-echo $colorsObject -> red."<br>";
-echo $colorsObject->{$colors[0]}."<br>";
-
+echo $colorsObject -> red."<br>";//result:#f00;
+echo $colorsObject->{$colors[0]}."<br>";//result:#f00;
 
 ?>
 
