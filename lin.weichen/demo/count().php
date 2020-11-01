@@ -1,6 +1,5 @@
 <?php
 
-//
 include "../lib/php/functions.php";
 
 $notes_object = file_get_json("json_notes.json");
@@ -30,12 +29,11 @@ $users_array = file_get_json("users.json");
          <ul>
          <?php
 
-         // for(instantiation; comparison; iteration)
-         //$notes_object->notes; notes properity can be changed cause notes from data 
+         // instantiation comparison iteration
          for($i=0; $i<count($notes_object->notes); $i++){
             echo "<li>".
             $notes_object->notes[$i].
-            "</li>\n";//\n, 在html的畫面多了空行，方便閱讀
+            "</li>\n";
          }
 
          ?>
@@ -56,9 +54,6 @@ $users_array = file_get_json("users.json");
             <strong>{$users_array[$i]->name}</strong>
             <span>{$users_array[$i]->type}</span>
             </li>\n";
-            //use {braces} , 可用於包覆“複雜”。 
-            //use one "", 可用於“多行”段落。 
-
          }
 
          ?>

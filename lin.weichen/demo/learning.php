@@ -181,5 +181,41 @@ function print_p($d) {
 print_p($_GET);
 print_p($colors);
 
+?>
 
+<hr>
 
+<?php
+
+//Loop (for and while)
+//for
+for($i = 0; $i<10; $i++){
+	echo $i."-";
+	// if($i>5){
+	// 	exit;
+	// }
+}
+echo "<br>";
+
+for($i = 0; $i<10; $i++){
+	echo $i."-";
+	if($i>5){
+		exit;
+	}
+}
+?>
+
+<hr>
+
+<?php
+//conut()
+$food = array('fruits' => array('orange', 'banana', 'apple'),
+              'veggie' => array('carrot', 'collard', 'pea'));
+
+// recursive count
+echo count($food, COUNT_RECURSIVE); // output 8
+
+// normal count
+echo count($food); // output 2
+
+?>

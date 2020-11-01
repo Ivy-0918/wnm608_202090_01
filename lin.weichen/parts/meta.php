@@ -1,9 +1,10 @@
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Website</title>
+<base href="/aau/wnm608/lin.weichen/styleguide">
 
-	<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
+<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<!-- <link rel="stylesheet" href="css/storetheme.css"> -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
