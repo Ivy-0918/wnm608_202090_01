@@ -4,7 +4,12 @@
 include "../lib/php/functions.php";
 
 $notes_object = file_get_json("json_notes.json");
+// $filename = "json_notes.json";
+// $file = file_get_contents($filename);
+// $notes_object = json_decode($file);
+
 $users_array = file_get_json("users.json");
+
 
 // print_p($notes_object);
 
@@ -50,7 +55,7 @@ $users_array = file_get_json("users.json");
          <ul>
          <?php
 
-         // instantiation comparison iteration
+          // instantiation comparison iteration
          for($i=0; $i<count($users_array); $i++){
             echo "<li>
             <strong>{$users_array[$i]->name}</strong>

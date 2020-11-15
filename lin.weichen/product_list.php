@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+include_once"lib/php/functions.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -16,6 +20,32 @@
 			<h2>Product List</h2>
 
 			<ul>
+				<?php
+
+
+				// $conn = makeConn();
+
+				// $result = $conn->query("SELECT *FROM products");
+				// if($conn->errno) die($conn->error);
+
+				// while($row = $result->fetch_object()){
+				// 	echo "$row->name";
+				// }
+
+				echo array_reduce(
+					MYSQLQuery("SELECT *FROM products"),
+					function($r,$o){
+						return $r."<li>
+						<a=href'product_item.php?id=$o->id'>$o->name-&dollar;$o->price</a>
+						</li>";
+						//$r: reduce value; $o: array object
+					}
+				);
+
+				?>
+
+
+
 				<!-- li*10>a['href=product_item.php?id=$']>{Product $}	 -->
 				<li><a href="product_item.php?id=1">Product 1</a></li>
 				<li><a href="product_item.php?id=2">Product 2</a></li>
