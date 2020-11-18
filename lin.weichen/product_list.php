@@ -1,6 +1,26 @@
 <?php
 
+
 include_once"lib/php/functions.php";
+//any particular page should not include "second", only once;
+
+function makeProductist($r,$o){
+return $r. <<<HTML
+<div class="col-xs-12 col-md-4">
+	<a href="product_item.php?id=$o->id" class="product-item">
+		<figure>
+			<div class="product-image">
+				<img src="images/store/chucky/chucky_3.png">
+			</div>
+			<figcaption class="product-description">
+				<div class="product-price" style="font-size: 1.2em; padding: 0.2em 0.4em;">&dollar;$o->price</div>
+				<div class="product-title" style="font-size: 0.8em;">$o->name</div>
+			</figcaption>
+		</figure>
+	</a>
+</div>
+HTML;
+}
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -19,48 +39,49 @@ include_once"lib/php/functions.php";
 		<div class="card soft">
 			<h2>Product List</h2>
 
-			<ul>
+			<div class="grid gap">
+				
 				<?php
 
+				//叫出在database設定的所有產品;
+					// $conn = makeConn();
 
-				// $conn = makeConn();
+					// $result = $conn->query("SELECT *FROM products");
+					// if($conn->errno) die($conn->error);
 
-				// $result = $conn->query("SELECT *FROM products");
-				// if($conn->errno) die($conn->error);
+					// while($row = $result->fetch_object()){
+					// 	echo "<li>$row->name</li>";
+					// }//-->
 
-				// while($row = $result->fetch_object()){
-				// 	echo "$row->name";
-				// }
 
+				//array_reduce()
+					//$r: reducing value; $o: current object
 				echo array_reduce(
-					MYSQLQuery("SELECT *FROM products"),
-					function($r,$o){
-						return $r."<li>
-						<a=href'product_item.php?id=$o->id'>$o->name-&dollar;$o->price</a>
-						</li>";
-						//$r: reduce value; $o: array object
-					}
+					MYSQLQuery("
+						SELECT 
+						*FROM products
+						ORDER BY date_create DESC
+						LIMIT 12
+					" ),//Loop MYSQLQuery
+					'makeProductist'
+
+
+					//'makeProducts'等同於以下這些
+						// function($r,$o){
+						// 	return $r."<li>
+						// 	<a href='product_item.php?id=$o->id'>$o->name-&dollars;$o->price</a>
+						// 	</li>";
+						// }
 				);
 
 				?>
+		
+			
 
-
-
-				<!-- li*10>a['href=product_item.php?id=$']>{Product $}	 -->
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-				<li><a href="product_item.php?id=5">Product 5</a></li>
-				<li><a href="product_item.php?id=6">Product 6</a></li>
-				<li><a href="product_item.php?id=7">Product 7</a></li>
-				<li><a href="product_item.php?id=8">Product 8</a></li>
-				<li><a href="product_item.php?id=9">Product 9</a></li>
-				<li><a href="product_item.php?id=10">Product 10</a></li>	
-			</ul>
-
+			</div>
 		</div>
 	</div>
 
 </body>
 </html>
+
