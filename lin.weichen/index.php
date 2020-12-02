@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+include_once"lib/php/functions.php";
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -12,6 +17,7 @@
 
 	<?php include "parts/navbar.php"?>
 	
+	
 	<div class="view-img" style="background-image: url(images/main.jpg);">
 		<h5></h5>
 	</div>
@@ -23,7 +29,10 @@
 	</div>
 
 	<div class="container">
-		<h2>Category</h2>
+		<div class="title">
+			<h2>Category</h2>
+		</div>
+		<hr>
 
 			<div class="grid gap">
 				<div class="col-xs-12 col-md-4">
@@ -71,5 +80,17 @@
 			</div>
 	</div>
 
+	<div class="container">
+		<div class="title">
+			<h2>Popular Products</h2>
+		</div>
+		<hr>
+			<div class="grid gap">
+				
+			</div>
+
+	</div>
+
 </body>
+<?php include "parts/footer.php"?>
 </html>

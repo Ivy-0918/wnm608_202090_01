@@ -32,10 +32,18 @@ h4{
 [class*='col-']>.well{
 	height: 100%;
 }
-
-
-
-
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+	font-weight: bold;
+}
+hr{
+	width: 30px;
+    border: 1px solid #e3504e;
+}
 
 @media(max-width: 600px){
 	/*自訂要另外編輯的部分（h4:fon-size)*/
@@ -55,7 +63,9 @@ h4{
 	margin-right: 30px;
 
 }*/
-
+.title{
+	text-align: center;
+}
 
 /*my_nav*/
 
@@ -161,9 +171,11 @@ h4{
 .product-price{
 	font-size: 1.2em; 
 	padding: 0.2em 0.4em;
+	color: var(--color-navbar);
 }
 .product-title{
-	font-size: 0.8em;
+	font-size: 1em;
+	padding: 0.2em 0.4em;
 }
 /*css_ratio_trick*/
 .product-image{
@@ -333,4 +345,32 @@ h4{
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
+.main-content{
+	margin-top: 3em;
+    padding: 1em 2em;
+   	margin-right: auto;
+   	margin-left: auto;
+}
+.card.soft.flat{
+	padding: 0 15px;
+}
+/* badge標誌訊息*/
+span.badge:not(:empty)::after{
+	content:')';
+}
+span.badge:not(:empty)::before{
+	content:'(';
+}
 
+/*footer*/
+.email,
+.phone{
+	margin-bottom: 1em;
+}
+.social a{
+	padding: 0 10px;
+}
+.hours,
+.address{
+	color: white;
+}

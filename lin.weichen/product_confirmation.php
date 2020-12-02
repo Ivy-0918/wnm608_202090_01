@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+include_once"lib/php/functions.php";
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -14,8 +19,7 @@
 		<div class="card soft">
 			<h2>Thanks for Purchasing</h2>
 
-			<a href="iproduct_list.php">Back to shopping</a>
-
+			<a href="product_list.php">Back to shopping</a>
 		</div>
 	</div>
 </body>

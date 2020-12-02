@@ -8,10 +8,14 @@
 			<ul class="display-flex">
 				<li><a href="about.php">About</a></li>
 				<li><a href="product_list.php">Products</a></li>
-				<li><a href="product_cart.php">Cart</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="product_cart.php">
+					<span>Cart</span>
+					<span class="badge"><?= makeCartBadge() ?></span>
+				</a></li>
+				<li><a href="">Contact</a></li>
 			</ul>
 		</nav>
+
 	
 	</div>
 </header>
