@@ -1,6 +1,6 @@
 <header class="navbar">
 	<div class="container display-flex flex-align-center">
-		<div class="flex-none"><h1><a href="index.php">Store Website</a></h1></div>
+		<div class="flex-none"><h1><a href="index.php">DD SHOP</a></h1></div>
 		
 		<div class="flex-stretch"></div>
 
@@ -14,6 +14,7 @@
 				</a></li>
 				<li><a href="">Contact</a></li>
 			</ul>
+			
 		</nav>
 
 	

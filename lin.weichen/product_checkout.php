@@ -27,4 +27,5 @@ include_once"lib/php/functions.php";
 		</div>
 	</div>
 </body>
+<!-- <?php include "parts/footer.php"?> -->
 </html>

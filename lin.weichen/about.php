@@ -15,6 +15,10 @@ include_once"lib/php/functions.php";
 
 	<?php include "parts/navbar.php"?>
 
+	<div class="view-img" style="background-image: url(images/window-2.jpg); margin: 0;" >
+		<h5></h5>
+	</div>
+
 	<div class="container">
 		<div class="card soft">
 			<h2>About Us</h2>
@@ -23,4 +27,5 @@ include_once"lib/php/functions.php";
 		</div>
 	</div>
 </body>
+<?php include "parts/footer.php"?>
 </html>

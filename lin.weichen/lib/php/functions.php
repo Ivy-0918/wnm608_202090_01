@@ -56,6 +56,16 @@ function MYSQLIQuery($sql){
 		$a[] = $row;
 
 	return $a;
+   // print_p([$conn,$result]);
+   // die;
+
+   // if(@$result->num_rows) {
+   //    while($row = $result->fetch_object())
+   //       $a[] = $row;
+   // }
+   // if(@$conn->insert_id) return $conn->insert_id;
+
+   // return $a;
 }
 
 
@@ -138,7 +148,7 @@ function makeCartBadge() {
 }
 
 
-
+//設置預設值($key,$value)
 function setDefault($k,$v) {
    if(!isset($_GET[$k])) $_GET[$k] = $v;
-}
+}//如果沒有設置'key' 則'key'等同於'value'

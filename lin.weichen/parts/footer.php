@@ -38,6 +38,11 @@
 				</div>
 				<div class="col-xs-12 col-md-3">
 				<h2 style="color: white;">Type Info</h2>
+
+				<div class="form-control-message">
+					<label for="message-1" class="form-label-texture">Mail Us</label>
+					<input id="message-1" type="text" placeholder="Text" class="form-input-texture">
+				</div>
 				</div>
 			</div>
 		</div>

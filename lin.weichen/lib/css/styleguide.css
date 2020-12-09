@@ -265,7 +265,7 @@ code.well {
 	width: initial;
 }
 
-
+.hotdog.stack,
 .hotdog{
 	display: inline-flex;
 	width: 100%;
@@ -280,7 +280,8 @@ code.well {
 		background-color: var(--color-neutral-dark);
 		color: var(--color-neutral-light);
 	}
-
+	.hotdog.stack button,
+	.hotdog.stack input,
 	.hotdog input{
 		background-color: transparent;
 		border-width: 0;
@@ -289,6 +290,28 @@ code.well {
 		font:inherit;
 		padding: 0 1em;
 	}
+
+	.hotdog.stack{
+		padding: 0;
+		height: 40px;
+
+	}
+	.hotdog.stack input{
+		padding: 0.5em 1.5em;
+	}
+	.hotdog.stack button{
+		background-color: white;
+		padding: 0.5em 1.5em;
+		flex:none;
+	}
+	.hotdog.stack>:first-child{
+		border-radius: 2em 0 0 2em;
+	}
+	.hotdog.stack>:last-child{
+		border-radius: 0 2em 2em 0 ;
+	}
+
+
 
 .form-select>select{
 	padding: 0.5em 1em;

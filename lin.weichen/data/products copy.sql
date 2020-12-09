@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
-  `catergory` varchar(64) NOT NULL,
+  `category` varchar(64) NOT NULL,
   `price` decimal(9,2) NOT NULL,
   `quantity` int(12) NOT NULL,
   `date_create` datetime NOT NULL,

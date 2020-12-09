@@ -1,4 +1,4 @@
-
+//鼠標變換照片
 $(()=>{
    $(".image-thumbs img").on("mouseenter",function(e){
       let src = $(this).attr("src");
@@ -8,14 +8,14 @@ $(()=>{
 
 
 
-
+//檢查排序功能
 const checkSort = el => {
    console.log(el)
 
    let form = el.closest('form');
    console.log(form)
 
-   let selected = el.querySelector(':checked');
+   let selected = el.querySelector(':checked');//cause ':selected' doesn't work!
    console.log(selected)
 
    let orderby = selected.dataset.orderby;
@@ -28,19 +28,8 @@ const checkSort = el => {
 
    console.log(orderby,orderby_direction)
 }
-// $(()=>{
-//    $(".image-thumbs img").on("mouseenter",function(e){
-//       let src = $(this).attr("src");
-//       $(".image-main img").attr("src",src);
-//    })
-// })
 
 
 
 
-// const checkSort = el => {
-//    console.log(el)
 
-//    let form = el.closest('form');
-//    console.log(form)
-// }

@@ -23,6 +23,10 @@ body{
 h4{
 	font-size: 1.2em;
 }
+h2{
+	margin: 0;
+}
+
 
 [class*='col-']>.card{
 	height: 100%;
@@ -172,23 +176,25 @@ hr{
 	font-size: 1.2em; 
 	padding: 0.2em 0.4em;
 	color: var(--color-navbar);
+	font-weight: bold;
 }
 .product-title{
 	font-size: 1em;
 	padding: 0.2em 0.4em;
 }
+
 /*css_ratio_trick*/
 .product-image{
 	position: relative;
 	height: 0;
 	overflow: hidden;
-	padding-bottom: 90%;
+	padding-bottom: 100%;
 }
 .image-main{
 	position: relative;
 	height: 0;
 	overflow: hidden;
-	padding-bottom: 80%;
+	padding-bottom: 100%;
 }
 .image-main img,
 .product-image img{
@@ -207,8 +213,30 @@ hr{
 	object-fit: cover;
 }
 
-
-
+/*button*/
+.button{
+	margin: 7em 0 1em 0;
+}
+.form-button{
+	display: inline-block;
+    width: 100%;
+    font: inherit;
+    border-radius: 30px;
+    border-width: 0;
+    padding: 0.5em 2em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+.form-button:hover{
+	background-color: var(--color-navbar);
+	color: white;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
 
 /*color choice*/
 .example-primary,
@@ -300,8 +328,13 @@ hr{
 	margin-bottom: 3em;
 }
 
+.sort{
+	margin-top: 30px;
+}
 
-
+.search-right{
+	float: right;
+}
 /*shop button*/
 .cart-button{
 	display: inline-block;
@@ -373,4 +406,18 @@ span.badge:not(:empty)::before{
 .hours,
 .address{
 	color: white;
+}
+.form-label-texture{
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+}
+.form-input-texture{
+	display: inline-block;
+	width: 100%;
+	border-width: 0;
+	background-color: transparent;
+	font:inherit;
+	padding: 0.5em 1em;
+	border-bottom: 1px solid var(--color-neutral-light);
+	outline: 0;
 }
