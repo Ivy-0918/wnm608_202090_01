@@ -52,8 +52,11 @@ function MYSQLIQuery($sql){
 
 	if($conn->errno) die($conn->error);
 
-	while($row = $result->fetch_object())
-		$a[] = $row;
+	if(@$result->num_rows) {
+      while($row = $result->fetch_object())
+         $a[] = $row;
+   }
+   if(@$conn->insert_id) return $conn->insert_id;
 
 	return $a;
    // print_p([$conn,$result]);
@@ -115,6 +118,7 @@ function addToCart($id,$amount) {
 	}//如果購物車沒有你要的產品，那就是將新商品添加到購物車。
    setCart($cart);
 }
+
 
 
 function getCartItems() {

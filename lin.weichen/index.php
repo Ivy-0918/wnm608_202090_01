@@ -11,17 +11,68 @@ include_once"parts/templates.php";
 	<title>Store</title>
 	<!-- <link rel="stylesheet" href="css/storetheme.css"> -->
 	<?php include "parts/meta.php"?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
 <body>
 
 	<?php include "parts/navbar.php"?>
-	
-	
-	<div class="view-img" style="background-image: url(images/main.jpg);">
-		<h5></h5>
+
+
+	<div class="view-img" style="background-image: url(images/window-2.jpg); height:75vh">
+		<div class="top-content">
+			<!-- <h2 class="title" style="text-align: center;">DD's Shop</h2> -->
+			<div class="viewer-logo"><img src="images/logo.png" style="vertical-align : middle; width: 100%;"></div>
+			<a href="product_list.php" class="top-btn">Order Now</a>	
+		</div>
 	</div>
+
+	<div class="container" id="about" style="background-color: white;">
+		<h2 style="text-align: center;">About Us</h2>
+		<hr>
+		<div class="grid gap">
+			<div class="col-sm-12 col-md-6">
+				<div class="mid-content">
+					<h4>"Toys are not just playthings that bring happiness to childhood,
+					they also can entrust emotions."</h4>
+					<p>I love to collect toys and models from works such as animation and movies because their value is classic and representative. </p>
+					<p>Therefore, I want to set up websites related to toys and models to attract more customers who have the same feelings for toys.</p>
+					<br>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<div class="mid-img">
+					<img src="images/bottom-img.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <section class="about" id="about">
+		<div class="grid gap" style="justify-content: space-between;">
+			<div class="col-sm-12 col-md-6">
+				<div class="mid-content">
+					<h2>About Us</h2>
+					<p>I love to collect toys and models from works such as animation and movies because their value is classic and representative. </p>
+					<p>Therefore, I want to set up websites related to toys and models to attract more customers who have the same feelings for toys.</p>
+					<br>
+					
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6">
+				
+			</div>
+		</div>
+	</section> -->
+	
+
+
+	
+
+	<!-- <div class="view-img" style="background-image: url(images/main.jpg);"></div> -->
+	
+	
 	<!-- <div class="container">
 		<div class="card soft">
 			<h2>Welcome to the Store</h2>
@@ -29,132 +80,22 @@ include_once"parts/templates.php";
 		
 	</div> -->
 
-	<div class="container">
-		<div class="title">
-			<h2>Category</h2>
-		</div>
-		<hr>
-		<div class="grid gap">
+	<?php include "parts/category.php"?>
 
-			<div class="col-xs-12 col-md-4">
-				<a href="product_item.php?id=2">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/DB_GK_Vol.5_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$71.90</div>
-							<div class="product-title" >GK Son Gohan Vol.4</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<a href="product_item.php?id=8">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/OP_GK_Vol.2_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$88.25</div>
-							<div class="product-title" >WCF Roronoa Zoro Vol.4</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<a href="product_item.php?id=13">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/chucky_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$14.99</div>
-							<div class="product-title" >Chucky</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
+	<!-- <div class="container">
+		<h2>New Models</h2>
 
-		</div>
-	</div>
+		<?php recommendCategory('model') ;?>
+	</div> -->
 
-	<div class="container">
-		<div class="title">
-			<h2>Popular Products</h2>
-		</div>
-		<hr>
-		<div class="grid gap">
-			<div class="col-xs-12 col-md-3">
-				<a href="product_item.php?id=5">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/DB_POP_Vol.4_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$74.89</div>
-							<div class="product-title" >P.O.P Furiza Vol.3</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<a href="product_item.php?id=4">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/DB_WCF_Vol.2_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$27.55</div>
-							<div class="product-title" >WCF Master Roshi Vol.2</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<a href="product_item.php?id=11">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/OP_POP_Vol.5_1.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$110.98</div>
-							<div class="product-title" >P.O.P Crocodile Vol.7</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<a href="product_item.php?id=14">
-					<figure class="product-list">
-						<div class="product-image">
-							<img src="images/store/potato.jpg">
-						</div>
-						
-						<figcaption class="product-description">
-							<div class="product-price" style="color: var(--color-navbar);">$25</div>
-							<div class="product-title" >Mr.Potato Head</div>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			
-		</div>
-		<div class="title" style="margin: 20px 0;">
-			<a href="product_list.php">
-				View More >>
-			</a>
-		</div>
-	</div>
+
+	<?php include "parts/popular.php"?>
+
+	
 	<!-- <div class="view-img" style="background-image: url(images/main.jpg);">
 		<h5></h5>
 	</div> -->
+	
 </body>
 <?php include "parts/footer.php"?>
 </html>

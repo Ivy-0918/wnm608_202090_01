@@ -11,6 +11,7 @@ $thumbs = explode(",",$product->image_other);
 $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='images/store/$o'>";
 });
 
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +36,15 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='ima
 			               		</div>
 					</div>
 					<div class="col-xs-12 col-md-5">
-						<form class="card soft flat" method="post" action="product_actions.php?action=add-to-cart">
+						<form class="card soft flat" style="border: 2px solid #e95958;" method="post" action="product_actions.php?action=add-to-cart">
 							<!-- hidden producID -->
 							<div class="sort">
 								<a href="product_list.php">All</a>
 								/
 								<a href="product_list.php?t=products_by_category&category=<?= $product->category ?>"><?= $product->category ?></a>
+								/
+								<?= $product->name ?>
+
 							</div>
 					
 							<input type="hidden" name="product-id" value="<?= $product->id ?>">
@@ -48,11 +52,11 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='ima
 					
 							<div class="card-section">
 								<h2><?= $product->name ?></h2>
-								<div class="product-price">&dollar;<?= $product->price ?></div>
+								<div class="product-price" style="font-size: 1.8em;">&dollar;<?= $product->price ?></div>
 					
-								<div class="">
+								<!-- <div class="">
 									<p><?= $product->description ?></p>
-								</div>
+								</div> -->
 							</div>
 							<div class="card-section">
 								<div class="form-control">
@@ -65,11 +69,11 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='ima
 											<option value="3">3</option>
 											<option value="4">4</option>
 											<option value="5">5</option>
-											<option value="6">6</option>
+											<!-- <option value="6">6</option>
 											<option value="7">7</option>
 											<option value="8">8</option>
 											<option value="9">9</option>
-											<option value="10">10</option>
+											<option value="10">10</option> -->
 										</select>
 									</div>
 								</div>
@@ -84,13 +88,47 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='ima
 									</div>
 								</div> -->
 					
-								<div class="button">
-									<div class="form-control">
-										<input type="submit" class="form-button" value="Add To Cart">
+								
+								<div class="form-control">
+									<input type="submit" class="form-button" value="Add To Cart">
 
-										<a href="product_cart.php">
-										<input type="submit" class="form-button" value="Buy Now">
-										</a>
+									<!-- <a href="product_cart.php">
+									<input type="submit" class="form-button" value="Buy Now">
+									</a> -->
+									<!-- <a href="product_cart.php" class="form-button">Buy Now</a> -->
+								</div>
+
+					
+							</div>
+							<div class="card-section">
+								<h4>Product Info</h4>
+
+								<div class="product-item-info">
+									<div class="product-item-t">Quality</div>
+									<div class="product-item-c">PU</div>
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-t">Origin</div>
+									<div class="product-item-c">America</div>
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-t">Stocks</div>
+									<div class="product-item-c">The last 5 items left</div>
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-t">Popularity</div>
+									<div class="product-item-c">5 items sold out</div>
+								</div>
+								<!-- <div class="product-item-info">
+									<div class="product-item-t">Label</div>
+									<div class="product-item-c">
+										
+							        </div>
+								</div> -->
+								<div class="product-item-info">
+									<div class="product-item-t">Summary</div>
+									<div class="product-item-c" >
+										<?= $product->description ?>
 									</div>
 								</div>
 							</div>
@@ -103,25 +141,15 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){return $r."<img src='ima
 
 
 			<div class="title">
-				<h2>Related Products</h2>
+				<h2 style="text-align: center;">Related Products</h2>
 			</div>
 
-			<div class="grid gap">
-
+			<!-- 從$products選擇最相似$cat，而不是＄id-->
 				<?php
-
-				echo array_reduce(
-					MYSQLIQuery("
-						SELECT *
-						FROM products
-						WHERE id in (4,7,13)
-					" ),//Loop MYSQLQuery
-					'makeProductList'
-				);
-
+				recommendSimilar($product->category,$product->id);
 				?>
+
 				
-			</div>
 		
 
 				<!-- <?php

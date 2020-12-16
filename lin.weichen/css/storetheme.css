@@ -4,9 +4,10 @@
 	--color-neutral-medium:#999;
 	--color-neutral-dark:#444;
 
-
+	/*灰黑*/
 	--color-navbar:#e95958;
-	--color-main-medium:red;
+	/*按鈕黑轉粉*/
+	--color-main-medium:#E95957;
 	--color-main-dark:red;
 
 	--color-alt-light:red;
@@ -18,13 +19,30 @@
 	--color-purchase:red;
 }
 body{
-	font-family: Arial, sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
-h4{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{font-family: 'Josefin Sans', sans-serif;
+padding-bottom: 10px;
+padding-top: 10px;}
+
+
+/*h4{
 	font-size: 1.2em;
-}
+}*/
 h2{
 	margin: 0;
+
+}
+
+li,
+p{
+font-family: 'Lato', sans-serif;
 }
 
 
@@ -38,6 +56,7 @@ h2{
 }
 li{
 	list-style-type: none;
+	margin-right: 1em;
 }
 a{
 	text-decoration: none;
@@ -51,32 +70,402 @@ hr{
 
 @media(max-width: 600px){
 	/*自訂要另外編輯的部分（h4:fon-size)*/
+	h4{
+		font-size: 1em;
+		padding: 0;}
+	div.viewer-logo{
+		width: 45%;
+	}
+	div.navbar-logo{
+		width: 10%;
+	}
+	a.top-btn {
+		margin-top: 3em;
 	
+  	}
+  	div .image-thumbs img{
+  		width: 95px;
+    	height: 96px;
+  	}
+
+  	div form.hotdog.stack {
+    width: 400px;
+    margin: 0 8px;
+    margin-bottom: 20px;
+	}
+
+	.view-img{
+		/*background-image: url(images/main.jpg) no-repeat;*/
+		position: relative;
+	    overflow: hidden;
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment: inherit;
+	    height: 70vw;
+	}
+	/*.view-img h2{
+		/*background-image: url(images/main.jpg) no-repeat;*/
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    color: white;
+	    font-size: 5em;
+	}*/
+
+}
+	
+
+
+/*@import url(mobile-layout.css)screen and (max-width: 600px){
 }
 
-/*.view-window {
+
+
+/*my_title*/
+.title{
+	text-align: center;
+}
+
+
+
+/*window*/
+.view-img {
+	background-image: url(images/window-2.jpg);
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 70vh;
-}
-.nav{
-	text-align: center;
-	margin-right: 30px;
-
-}*/
-.title{
-	text-align: center;
+    justify-content: center;
+	align-items:center;
+    height: 80vh;
 }
 
-/*my_nav*/
+.view-img h2,
+.view-img .top-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4em;
+}
+
+.view-img .top-btn{
+    font-size: 1em;
+    top: 55%;
+    left: 50%;
+}
+.viewer-logo{
+	position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14%;
+
+}
+/*Nav*/
+.navbar-logo{
+	width: 5%;
+}
+.navbar-logo img{
+	width: 100%; 
+	margin-top: 1em;
+	margin-left: 1em
+}
+/*Category*/
+.category-title{
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+{
+
+}
+.c_product-image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.c_product-list:hover .c_product-image {
+  opacity: 0.3;
+}
+.c_product-list{
+	position: relative;
+  	width: 100%;
+    margin: 0;
+}
+
+.middle{
+	transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.c_product-list:hover .middle {
+  opacity: 1;
+}
+
+.c_product-title{
+background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*Home(Banner)*/
+/*My_Banner_Button*/
+.top-btn{
+	font-size: 1em;
+	color: #fff;
+	background-color: #E95957;
+	display: inline-block;
+	padding: 10px 30px;
+	margin-top: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition:0.5s;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+
+}
+.top-btn:hover{
+	letter-spacing: 6px;
+}
+
+/*About Us*/
+.about{
+	background-color: #fff;
+	color: black;
+	position: relative;
+	width: 100%;
+	justify-content: space-between;
+}
+.mid-content{
+
+	width: 100%;
+	padding-left: 30px;
+
+}
+.mid-img{
+	padding: 35px 20px;
+	width: 100%;
+
+}
+.mid-img img{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+
+}
+
+
+/* Product List Design */
+.product-item{
+	margin:0;
+	border-radius: 0.7em;
+	background-color: white;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+	padding: 1em;
+	transition:all 0.3s;
+	display: block;
+	height: 100%;
+}
+.product-item figure{
+	margin: 0;
+}
+.product-item:hover{
+	box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
+}
+.product-image img{
+	width: 100%;
+	/*width:100% 指物件會固定大小*/
+
+}
+.product-list{
+	padding: 1em 0 1.8em 0;
+	margin:0;
+	border-radius: 0.7em;
+	background-color: white;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+	transition:all 0.3s;
+	text-align: center;
+}
+.product-list:hover{
+	box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
+}
+.product-price{
+	font-size: 1.2em; 
+	padding: 0.2em 0.4em;
+	color: var(--color-navbar);
+	font-weight: bold;
+	padding: 8px;
+}
+.product-title{
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+}
+figcaption.product-description {
+    margin-top: 20px;
+}
+
+/*css_ratio_trick*/
+.product-image{
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 100%;
+}
+.image-main{
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 100%;
+}
+.image-main img,
+.product-image img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-thumbs img{
+	margin-top: 0.5em;
+	width: 110px;
+	height: 110px;
+	object-fit: cover;
+}
+
+/*Form*/
+form.hotdog.stack {
+    width: 480px;
+}
+
+/*My_Checkout*/
+.hotdog-ex{ 
+	background-color: var(--color-neutral-light);
+	border-width: 0px;
+	border-radius:0.5em;
+}
+/*My_Checkout_Form*/
+input#first-name {
+    margin-right: 5px;
+}
+input#last-name {
+    margin-left: 5px;
+}
+.card-number {
+    width: 75%;
+}
+.card-secret {
+    width: 25%;
+    margin-left: 10px;
+}
+
+.product-item-info{
+	margin-bottom: 1em;
+}
+.product-item-t{
+	width: 150px;
+	float: left;
+	color: #929295;
+	padding-right: 10px;
+}
+.product-item-c{
+	overflow: hidden;
+}
+/*Admin_Image*/
+.flex-none.image-thumbs {
+    
+}
+
+
+
+
+/*button*/
+.button{
+	margin: 7em 0 1em 0;
+}
+.form-button{
+	display: inline-block;
+    width: 100%;
+    font: inherit;
+    border-radius: 30px;
+    border-width: 0;
+    padding: 0.5em 2em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+.form-button:hover{
+	background-color: var(--color-navbar);
+	color: white;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+
+/* badge標誌訊息*/
+span.badge:not(:empty)::after{
+	content:')';
+}
+span.badge:not(:empty)::before{
+	content:'(';
+}
+
+/*footer*/
+.email,
+.phone{
+	margin-bottom: 1em;
+}
+.social a{
+	padding: 0 10px;
+}
+.hours,
+.address{
+	color: white;
+}
+.form-label-texture{
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+}
+.form-input-texture{
+	display: inline-block;
+	width: 100%;
+	border-width: 0;
+	background-color: transparent;
+	font:inherit;
+	padding: 0.5em 1em;
+	border-bottom: 1px solid var(--color-neutral-light);
+	outline: 0;
+}
+
+
+/*my_nav_choice
 
 .navbar{
 	display: flex;
 	align-items: center;
 	margin-bottom: 1em;
+
 }
 .navbar img{
 	width: 60px;
@@ -120,124 +509,6 @@ hr{
 	cursor: pointer;
 }
 
-/*window*/
-.view-img {
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 80vh;
-}
-.view-img h5 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3em;
-}
-
-/* Product List Design */
-.product-item{
-	margin:0;
-	border-radius: 0.7em;
-	background-color: white;
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-	padding: 1em;
-	transition:all 0.3s;
-	display: block;
-	height: 100%;
-}
-.product-item figure{
-	margin: 0;
-}
-.product-item:hover{
-	box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
-}
-.product-image img{
-	width: 100%;
-	/*width:100% 指物件會固定大小*/
-
-}
-.product-list{
-	padding: 1em 0 1.8em 0;
-	margin:0;
-	border-radius: 0.7em;
-	background-color: white;
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-	transition:all 0.3s;
-	text-align: center;
-}
-.product-list:hover{
-	box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
-}
-.product-price{
-	font-size: 1.2em; 
-	padding: 0.2em 0.4em;
-	color: var(--color-navbar);
-	font-weight: bold;
-}
-.product-title{
-	font-size: 1em;
-	padding: 0.2em 0.4em;
-}
-
-/*css_ratio_trick*/
-.product-image{
-	position: relative;
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 100%;
-}
-.image-main{
-	position: relative;
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 100%;
-}
-.image-main img,
-.product-image img{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.image-thumbs img{
-	margin-top: 0.5em;
-	width: 120px;
-	height: 120px;
-	object-fit: cover;
-}
-
-/*button*/
-.button{
-	margin: 7em 0 1em 0;
-}
-.form-button{
-	display: inline-block;
-    width: 100%;
-    font: inherit;
-    border-radius: 30px;
-    border-width: 0;
-    padding: 0.5em 2em;
-    background-color: black;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    outline: 0;
-    -webkit-appearance: none;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-}
-.form-button:hover{
-	background-color: var(--color-navbar);
-	color: white;
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-}
-
 /*color choice*/
 .example-primary,
 .example-secondary{
@@ -248,8 +519,6 @@ hr{
 	font-size: 1.3em;
 	padding: 0.5em;
 }
-
-
 
 
 /*button choice*/
@@ -387,37 +656,4 @@ hr{
 .card.soft.flat{
 	padding: 0 15px;
 }
-/* badge標誌訊息*/
-span.badge:not(:empty)::after{
-	content:')';
-}
-span.badge:not(:empty)::before{
-	content:'(';
-}
 
-/*footer*/
-.email,
-.phone{
-	margin-bottom: 1em;
-}
-.social a{
-	padding: 0 10px;
-}
-.hours,
-.address{
-	color: white;
-}
-.form-label-texture{
-	font-size: 0.8em;
-	color: var(--color-neutral-medium);
-}
-.form-input-texture{
-	display: inline-block;
-	width: 100%;
-	border-width: 0;
-	background-color: transparent;
-	font:inherit;
-	padding: 0.5em 1em;
-	border-bottom: 1px solid var(--color-neutral-light);
-	outline: 0;
-}

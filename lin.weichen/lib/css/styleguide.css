@@ -2,6 +2,7 @@
 
 *, *::before, *::after{
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 :root{
@@ -21,6 +22,7 @@ body{
 	font-size: 100%;
 	font-family: Arial, sans-serif;
 	background-color: #f7f7f7;
+
 }
 
 
@@ -50,6 +52,7 @@ p::first-letter{
 }
 
 /*顯現/編寫程式碼*/
+
 
 
 code.well {
@@ -102,7 +105,8 @@ code.well {
 /*Navbar*/
 
 .navbar{
-	background-color:var(--color-neutral-dark);
+	/*background-color:var(--color-neutral-dark);*/
+	background-color:black;
 	color:var(--color-neutral-light);
 	line-height: var(--header-height);
 }
@@ -113,7 +117,7 @@ code.well {
 	font-size: 1em;
    font-family:Helvetica, Arial, sans-serif;
 }
-
+.form
 /* View-window*/
 .view-window {
     position: relative;
@@ -160,10 +164,13 @@ code.well {
 
 .card-section~.card-section{
 	border-top: 1px solid var(--color-neutral-light);
+	margin: 1em;
+    padding-top: 20px;
 
 }
 .card.section{
-	padding: 1em;
+	padding: 2.2em;
+	margin-top: 1.5em;
 }
 
 .well {
@@ -221,6 +228,9 @@ code.well {
 
 
 /*Forms*/
+.form{
+	width: 20%;
+}
 .form-input{
 	display: inline-block;
 	width: 100%;
@@ -265,6 +275,7 @@ code.well {
 	width: initial;
 }
 
+/*Hotdog*/
 .hotdog.stack,
 .hotdog{
 	display: inline-flex;
@@ -311,8 +322,7 @@ code.well {
 		border-radius: 0 2em 2em 0 ;
 	}
 
-
-
+/*Form*/
 .form-select>select{
 	padding: 0.5em 1em;
 	background-color: var(--color-neutral-light);

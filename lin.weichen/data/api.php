@@ -23,7 +23,7 @@ function getRequires($props) {
 
 //Return PHP data
 //他們無法請求所有內容，只能請求某些類型的數據。
-function makeStatement($type) {
+function makeStatement($type,$params=[]) {
 
    switch($type) {
       case "products_all":
@@ -107,6 +107,60 @@ function makeStatement($type) {
          break;
          //Like '%search%' >> %: similar example, serach app will show up apple;
          //因為product_list已經設好預設名了，{$_GET['orderby']},{$_GET['orderby_direction']},{$_GET['limit']} >>讓搜索能執行.
+
+      case "product_insert":
+         return MYSQLIQuery("INSERT INTO
+            `products`
+            (
+               `name`,
+               `price`,
+               `category`,
+               `description`,
+               `quantity`,
+               `image_other`,
+               `image_thumb`,
+               `date_create`,
+               `date_modify`
+            )
+            VALUES
+            (
+               '{$params[0]}',
+               '{$params[1]}',
+               '{$params[2]}',
+               '{$params[3]}',
+               '{$params[4]}',
+               '{$params[5]}',
+               '{$params[6]}',
+               NOW(),
+               NOW()
+            )
+            ");
+         break;
+
+      case "product_update":
+         return MYSQLIQuery("UPDATE
+            `products`
+            SET
+               `name` = '{$params[0]}',
+               `price` = '{$params[1]}',
+               `category` = '{$params[2]}',
+               `description` = '{$params[3]}',
+               `quantity` = '{$params[4]}',
+               `image_other` = '{$params[5]}',
+               `image_thumb` = '{$params[6]}'
+            WHERE `id` = {$params[7]}
+            ");
+         break;
+
+      case "product_delete":
+         return MYSQLIQuery("DELETE FROM
+            `products` WHERE `id` = {$params[0]}
+            ");
+         break;
+
+
+
+
 
 
       default: return ["error"=>"No Matched Type"];

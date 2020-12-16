@@ -14,13 +14,13 @@ $products = makeStatement("products_admin_all",[]);
 
 
 $empty_product = (object)[
-   "name"=>"Iron Man",
-   "price"=>"50",
-   "category"=>"toy",
-   "description"=>"toys#Decoration#Marvel Legends series#Marvel#Iron Man.",
-   "quantity"=>"3",
-   "image_other"=>"ironman_2.png,ironman_1.png,ironman_3.png",
-   "image_thumb"=>"ironman_2.png"
+   "name"=>"GK No.18",
+   "price"=>"35",
+   "category"=>"model",
+   "description"=>"models#Decoration#MegaHouse GK series#Dragon Ball#No.18",
+   "quantity"=>"5",
+   "image_other"=>"DB_GK_Vol.4_1.jpg,DB_GK_Vol.4_2.jpg,DB_GK_Vol.4_3.jpg",
+   "image_thumb"=>"DB_GK_Vol.4_1.jpg"
 ];
 
 
@@ -84,7 +84,7 @@ $thumbs_elements = array_reduce($thumbs,function($r,$o){
 });
 
 
-$addoredit = $id=='new' ? 'Add' : 'Edit';
+$addoredit= $id=='new' ? 'Add' : 'Edit';
 $createorupdate = $id=='new' ? 'create' : 'update';
 
 
@@ -138,8 +138,8 @@ echo <<<HTML
          <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&crud=$createorupdate">
             <h2>$addoredit Product</h2>
             <div class="form-control">
-               <label for="product-title" class="form-label">Title</label>
-               <input id="product-title" name="product-title" type="text" placeholder="Type product title" class="form-input" value="$product->name">
+               <label for="product-name" class="form-label">Name</label>
+               <input id="product-name" name="product-name" type="text" placeholder="Type product name" class="form-input" value="$product->name">
             </div>
             <div class="form-control">
                <label for="product-category" class="form-label">Category</label>
@@ -189,7 +189,7 @@ HTML;
 <body>
 
    <header class="navbar">
-      <div class="container display-flex">
+      <div class="container display-flex flex-align-center">
          <div class="flex-none">
             <h1>Products Admin</h1>
          </div>

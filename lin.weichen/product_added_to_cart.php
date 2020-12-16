@@ -37,4 +37,5 @@ $cart_product = cartItemById($_GET['id']);
 	</div>
 
 </body>
+<?php include "parts/footer.php"?>
 </html>

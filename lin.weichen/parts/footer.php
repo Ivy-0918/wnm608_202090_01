@@ -40,8 +40,11 @@
 				<h2 style="color: white;">Type Info</h2>
 
 				<div class="form-control-message">
-					<label for="message-1" class="form-label-texture">Mail Us</label>
-					<input id="message-1" type="text" placeholder="Text" class="form-input-texture">
+					<!-- <label for="message-1" class="form-label-texture">Mail Us</label> -->
+					<textarea id="message-1" style="color: black
+					; background-color: white;" placeholder="What do you want to say..." class="form-input"></textarea>
+					<div class="message-submit"><a href="." class="top-btn">Submit</a></div>
+
 				</div>
 				</div>
 			</div>

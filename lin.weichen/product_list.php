@@ -67,73 +67,51 @@ $products = isset($result['error']) ? [] : $result;
 			
 		</div> -->
       	<!-- URL: t=products_by_category&category = toy or model -->
-      	<div class="display-flex" style="margin:1em 0">
-         <div class="flex-none display-flex">
-            <form action="product_list.php" method="get">
-               <?
-               makeHiddenValues($_GET,[
-                  "category"=>"model",
-                  "t"=>"products_by_category"
-               ]);
-               ?>
-
-               <input type="submit" value="Models" class="form-button">
-            </form>
-
-            <form action="product_list.php" method="get">
-               <?
-               makeHiddenValues($_GET,[
-                  "category"=>"toy",
-                  "t"=>"products_by_category"
-               ]);
-               ?>
-
-               <input type="submit" value="Toys" class="form-button">
-            </form>
-
-            <form action="product_list.php" method="get"  style="margin: 30px 10px;">
-
-               <?
-               makeHiddenValues($_GET,[]);
-               ?>
-               <div class="form-select" style="background-color: white;">
-                  <select onchange="checkSort(this)">
-                     <?=makeSortOptions()?>
-                  </select>
-               </div>
-            </form>
-         </div>
-        
-         <div class="flex-stretch"></div>
-        
-         <div class="flex-none" style="margin-top: 30px;">
- 
-            <form action="product_list.php" method="get" class="hotdog stack" style="background-color: white;">
-				<!-- 'action': 處理表單提交的URL sent; 'method': 如何提交URL ; 'get': 操作符將表單數據附加到操作URL L ;'post' 將數據作為請求正文發送到服務器. -->
-			    <input type="search" name="s" placeholder="Search for a product"
-			     value="<?= @$_GET['s'] ?>">
-
-			    <?//makeHiddenValues：當搜索產品時，URL會顯示所有隱藏的價值
-			    makeHiddenValues([
-			        "orderby"=>$_GET['orderby'],
-			        "orderby_direction"=>$_GET['orderby_direction'],
-			        "limit"=>$_GET['limit'],
-			        "t"=>"search"
-			    ],[]);
-			    ?>
-
-			    <button type="submit" style="background-color: black; color: white;">Search</button>
-			</form>
-         </div>
-      </div>
+      	<div class="display-flex flex-align-center grid gap">
+      		<div class="col-sm-12 col-md-4">
+      			<form action="product_list.php" method="get"  style="margin: 30px 20px;">
+      		
+	               <?
+	               makeHiddenValues($_GET,[]);
+	               ?>
+	               	<div class="form-select" style="background-color: white;">
+	                  <select onchange="checkSort(this)">
+	                     <?=makeSortOptions()?>
+	                  </select>
+	               	</div>
+	            </form>
+      		</div>
+      		<div class="col-sm-12 col-md-2"></div>
+      		<div class="col-sm-12 col-md-6">
+      			<form action="product_list.php" method="get" class="hotdog stack" style="background-color: white;">
+					<!-- 'action': 處理表單提交的URL sent; 'method': 如何提交URL ; 'get': 操作符將表單數據附加到操作URL L ;'post' 將數據作為請求正文發送到服務器. -->
+				    <input type="search" name="s" placeholder="Search for a product"
+				     value="<?= @$_GET['s'] ?>">
+	
+				    <?//makeHiddenValues：當搜索產品時，URL會顯示所有隱藏的價值
+				    makeHiddenValues([
+				        "orderby"=>$_GET['orderby'],
+				        "orderby_direction"=>$_GET['orderby_direction'],
+				        "limit"=>$_GET['limit'],
+				        "t"=>"search"
+				    ],[]);
+				    ?>
+	
+				    <button type="submit" style="background-color: black; color: white;">Search</button>
+				</form>
+      		</div>
+      	</div>
 
 
+
+      <a href="index.php">	&lt;Back</a>
 		<div class="title">
-			<h2>Product List</h2>
+			<h2 style="text-align: center;">Product List</h2>
 		</div>
 		<hr>
 
 		<div class="grid gap">
+			
 			
 			<?php
 
@@ -174,6 +152,12 @@ $products = isset($result['error']) ? [] : $result;
 	
 		
 
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card soft">
+			<a href="admin">Product Admin</a>
 		</div>
 	</div>
 

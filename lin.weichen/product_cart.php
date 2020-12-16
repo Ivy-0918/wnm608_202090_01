@@ -23,11 +23,12 @@ $cart = getCartItems();
    <?php include "parts/navbar.php" ?>
 
 
-	<div class="container">
+	<div class="container" style="margin-top: 20px; ">
 		<div class="grid gap">
-			<div class="col-xs-12 col-md-8">
+			<div class="col-xs-12 col-md-12">
 				<div class="card soft">
-		        	<h2>Product Cart</h2>
+		        	<h2 style="text-align: center;">Product Cart</h2>
+		        	<hr>
 		        	<?
 
 		       		echo array_reduce($cart,'makeCartList');
@@ -35,10 +36,11 @@ $cart = getCartItems();
 		       		?>
 	    		</div>
 			</div>
-			<div class="col-xs-12 col-md-4">
+			<div class="col-xs-12 col-md-12">
 				<div class="card soft flat">
 					<div class="card-section">
-						<h2>Totals</h2>
+						<h2 style="text-align: center;">Totals</h2>
+						<hr>
 					</div>
 					<?= cartTotals()?>
 				</div>
@@ -47,5 +49,5 @@ $cart = getCartItems();
 	</div>
 
 </body>
-<!-- <?php include "parts/footer.php"?> -->
+<?php include "parts/footer.php"?>
 </html>
