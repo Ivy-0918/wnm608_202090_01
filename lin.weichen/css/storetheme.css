@@ -94,14 +94,9 @@ hr{
     margin-bottom: 20px;
 	}
 
-	.view-img{
+	div.view-img{
 		/*background-image: url(images/main.jpg) no-repeat;*/
-		position: relative;
-	    overflow: hidden;
-	    background-size: cover;
-	    background-position: center;
-	    background-attachment: inherit;
-	    height: 70vw;
+		background-attachment: inherit;
 	}
 	/*.view-img h2{
 		/*background-image: url(images/main.jpg) no-repeat;*/
