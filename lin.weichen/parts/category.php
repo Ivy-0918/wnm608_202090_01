@@ -14,7 +14,7 @@
 					
 						<figcaption class="product-description">
 							<div class="middle">
-								<div class="c_product-title" >Gragan Ball</div>
+								<div class="c_product-title" >Dragan Ball</div>
 							</div>
 						</figcaption>
 					</figure>

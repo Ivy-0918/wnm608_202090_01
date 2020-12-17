@@ -37,13 +37,16 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-3">
-				<h2 style="color: white;">Type Info</h2>
+				<h2 style="color: white;">Get More Information</h2>
 
 				<div class="form-control-message">
-					<!-- <label for="message-1" class="form-label-texture">Mail Us</label> -->
-					<textarea id="message-1" style="color: black
-					; background-color: white;" placeholder="What do you want to say..." class="form-input"></textarea>
-					<div class="message-submit"><a href="." class="top-btn">Submit</a></div>
+					<label for="message-1" class="form-label-texture">Email</label>
+					<input id="email" type="text" placeholder="Type your Email" class="hotdog hotdog-ex">
+
+				<!-- 	<textarea id="message-1" style="color: black
+					; background-color: white;" placeholder="What do you want to say..." class="form-input"></textarea> -->
+					
+					<div class="message-submit"><a href="." class="top-btn">Subscribe Us</a></div>
 
 				</div>
 				</div>
