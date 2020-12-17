@@ -36,8 +36,8 @@ include_once"parts/templates.php";
 				<div class="mid-content">
 					<h4>"Toys are not just playthings that bring happiness to childhood,
 					they also can entrust emotions."</h4>
-					<p>I love to collect toys and models from works such as animation and movies because their value is classic and representative. </p>
-					<p>Therefore, I want to set up websites related to toys and models to attract more customers who have the same feelings for toys.</p>
+					<p>I love to collect toys and models from television, such as animation and movies which their value is classic and representative. </p>
+					<p>Therefore, I want to set up websites related to toys and models to attract more customers who have the same emotions on toys and models.</p>
 					<br>
 				</div>
 			</div>
